@@ -1,0 +1,12 @@
+extends layout
+
+block content
+        // display the detail of the first item
+        - var item = repo
+        h3= item.name
+        div.row
+            div.four.columns= item.owner.login
+        div.row
+            a(href=item.branches_url) Branches
+        div.row 
+            a(href=item.forks_url) Forks

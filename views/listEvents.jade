@@ -1,0 +1,17 @@
+extends layout.jade
+
+block content
+    table.u-full-width
+        thead
+            tr
+                th Type
+                th Owner
+                th Created On
+        tbody
+        each event in events
+            tr
+                td
+                    a(href='/view/event/' + event.id)
+                        = event.type
+                td= event.actor.login 
+                td= event.created_at
